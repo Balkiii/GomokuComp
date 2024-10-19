@@ -4,6 +4,7 @@
 ### Rules 
 - The Gomoku variant used in this comp is unrestricted Gomoku, where there are no special rules for starting play.
 - For the purpose of approaching creative solutions, you may not look up solutions online for algorithms, theorems, or any of the sort (honor system). Since unrestricted Gomoku is solved, this would sort of defeat the purpose.
+- Teams are capped at 2 maximum, and individual submissiona are allowed
 
 ### Setup and Usage
 - Clone the repository to your Visual Studio or VSCode.
