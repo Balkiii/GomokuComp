@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dpanc\\source\\repos\\GomokuComp\\GomokuPackage\\GomokuPackage.csproj",
+      "projectUniqueName": "C:\\Users\\dpanc\\Source\\Repos\\GomokuComp\\GomokuComp\\GomokuPackage\\GomokuPackage.csproj",
       "projectName": "GomokuPackage",
-      "projectPath": "C:\\Users\\dpanc\\source\\repos\\GomokuComp\\GomokuPackage\\GomokuPackage.csproj",
+      "projectPath": "C:\\Users\\dpanc\\Source\\Repos\\GomokuComp\\GomokuComp\\GomokuPackage\\GomokuPackage.csproj",
       "packagesPath": "C:\\Users\\dpanc\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dpanc\\source\\repos\\GomokuComp\\GomokuPackage\\obj\\",
+      "outputPath": "C:\\Users\\dpanc\\Source\\Repos\\GomokuComp\\GomokuComp\\GomokuPackage\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\dpanc\\AppData\\Roaming\\NuGet\\NuGet.Config",
