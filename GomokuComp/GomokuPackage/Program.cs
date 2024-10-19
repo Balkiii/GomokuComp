@@ -13,10 +13,12 @@ namespace GomokuPackage
     {
         static void Main(string[] args)
         {
-            List<IBot> bots = [new RandomBot()];
+            List<IBot> bots = [new RandomBot()]; // Modify list contents to have different bots compete against each other
 
             Tournament tournament = new Tournament(bots);
-            tournament.RunTournament(1000);
+
+            int numberOfGamesToRunPerMatch = 1000;
+            tournament.RunTournament(numberOfGamesToRunPerMatch);
 
             Console.ReadLine();
         }
