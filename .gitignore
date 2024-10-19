@@ -1,0 +1,81 @@
+# Ignore Visual Studio temporary files, build results, and user-specific files.
+
+## Build Folders ##
+bin/
+obj/
+[Bb]uild/
+Debug/
+Release/
+
+## Visual Studio Files ##
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.VC.db
+*.opendb
+
+## Rider IDE Files ##
+.idea/
+*.sln.iml
+
+## Visual Studio Code Files ##
+.vscode/
+.vs/
+
+## MonoDevelop Files ##
+*.userprefs
+
+## Build Results ##
+*.exe
+*.dll
+*.app
+*.log
+*.dmg
+*.pkg
+*.so
+*.a
+*.lib
+
+## NuGet Packages ##
+*.nupkg
+*.snupkg
+packages/
+.nuget/
+
+## Bot DLLs ##
+Bots/*.dll
+Bots/*.pdb
+
+## Logs and Databases ##
+*.log
+*.mdf
+*.ldf
+
+## Test Results ##
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+*.testsettings
+
+## Temporary Files ##
+*.tmp
+*.temp
+*.bak
+*~
+*.swp
+*.swo
+*.tmp
+*.TMP
+*.temp
+
+## ReSharper ##
+_ReSharper*/
+*.[Rr]e[Ss]harper
+
+## Personal Files ##
+*.psess
+*.vsp
+
+# End of .gitignore

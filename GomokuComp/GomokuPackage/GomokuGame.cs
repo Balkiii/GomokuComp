@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,12 @@ namespace GomokuPackage
         private int[,] board = new int[15, 15];
         private int currentPlayer = 1;
         private int moveCount = 0;
+        public Stopwatch sw;
+
+        public long RemainingTime()
+        {
+            return 1000000 - sw.ElapsedTicks;
+        }
 
         public int[,] GetBoard()
         {
@@ -19,12 +26,17 @@ namespace GomokuPackage
 
         public bool MakeMove(int player, int x, int y)
         {
-            if (board[x, y] == 0)
+            try
             {
-                board[x, y] = player;
-                moveCount++;
-                return true;
+                if (board[x, y] == 0)
+                {
+                    board[x, y] = player;
+                    moveCount++;
+                    return true;
+                }
             }
+            catch { }
+
             return false;
         }
 
@@ -118,7 +130,7 @@ namespace GomokuPackage
 
         public void NextPlayer()
         {
-            currentPlayer = 3 - currentPlayer; // Switch between 1 and 2
+            currentPlayer = (currentPlayer == 1) ? 2 : 1; // Switch between 1 and 2
         }
 
         public bool IsBoardFull()

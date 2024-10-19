@@ -1,15 +1,36 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\dpanc\\source\\repos\\GomokuComp\\GomokuComp\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4E4AD707-74F3-4840-B2E0-77471FBDC9B7}|GomokuPackage\\GomokuPackage.csproj|c:\\users\\dpanc\\source\\repos\\gomokucomp\\gomokucomp\\gomokupackage\\tournament.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E4AD707-74F3-4840-B2E0-77471FBDC9B7}|GomokuPackage\\GomokuPackage.csproj|solutionrelative:gomokupackage\\tournament.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E4AD707-74F3-4840-B2E0-77471FBDC9B7}|GomokuPackage\\GomokuPackage.csproj|c:\\users\\dpanc\\source\\repos\\gomokucomp\\gomokucomp\\gomokupackage\\gomokugame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E4AD707-74F3-4840-B2E0-77471FBDC9B7}|GomokuPackage\\GomokuPackage.csproj|solutionrelative:gomokupackage\\gomokugame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E4AD707-74F3-4840-B2E0-77471FBDC9B7}|GomokuPackage\\GomokuPackage.csproj|c:\\users\\dpanc\\source\\repos\\gomokucomp\\gomokucomp\\gomokupackage\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E4AD707-74F3-4840-B2E0-77471FBDC9B7}|GomokuPackage\\GomokuPackage.csproj|solutionrelative:gomokupackage\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E4AD707-74F3-4840-B2E0-77471FBDC9B7}|GomokuPackage\\GomokuPackage.csproj|c:\\users\\dpanc\\source\\repos\\gomokucomp\\gomokucomp\\gomokupackage\\randombot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E4AD707-74F3-4840-B2E0-77471FBDC9B7}|GomokuPackage\\GomokuPackage.csproj|solutionrelative:gomokupackage\\randombot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E4AD707-74F3-4840-B2E0-77471FBDC9B7}|GomokuPackage\\GomokuPackage.csproj|c:\\users\\dpanc\\source\\repos\\gomokucomp\\gomokucomp\\gomokupackage\\ibot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E4AD707-74F3-4840-B2E0-77471FBDC9B7}|GomokuPackage\\GomokuPackage.csproj|solutionrelative:gomokupackage\\ibot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
-      "Orientation": 1,
+      "Orientation": 0,
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedHeight": 240,
-          "SelectedChildIndex": -1,
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,11 +43,76 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IBot.cs",
+              "DocumentMoniker": "C:\\Users\\dpanc\\source\\repos\\GomokuComp\\GomokuComp\\GomokuPackage\\IBot.cs",
+              "RelativeDocumentMoniker": "GomokuPackage\\IBot.cs",
+              "ToolTip": "C:\\Users\\dpanc\\source\\repos\\GomokuComp\\GomokuComp\\GomokuPackage\\IBot.cs",
+              "RelativeToolTip": "GomokuPackage\\IBot.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-19T04:43:00.253Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\dpanc\\source\\repos\\GomokuComp\\GomokuComp\\GomokuPackage\\Program.cs",
+              "RelativeDocumentMoniker": "GomokuPackage\\Program.cs",
+              "ToolTip": "C:\\Users\\dpanc\\source\\repos\\GomokuComp\\GomokuComp\\GomokuPackage\\Program.cs",
+              "RelativeToolTip": "GomokuPackage\\Program.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-19T04:12:47.927Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Tournament.cs",
+              "DocumentMoniker": "C:\\Users\\dpanc\\source\\repos\\GomokuComp\\GomokuComp\\GomokuPackage\\Tournament.cs",
+              "RelativeDocumentMoniker": "GomokuPackage\\Tournament.cs",
+              "ToolTip": "C:\\Users\\dpanc\\source\\repos\\GomokuComp\\GomokuComp\\GomokuPackage\\Tournament.cs",
+              "RelativeToolTip": "GomokuPackage\\Tournament.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAAwFIAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-19T04:12:48.104Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RandomBot.cs",
+              "DocumentMoniker": "C:\\Users\\dpanc\\source\\repos\\GomokuComp\\GomokuComp\\GomokuPackage\\RandomBot.cs",
+              "RelativeDocumentMoniker": "GomokuPackage\\RandomBot.cs",
+              "ToolTip": "C:\\Users\\dpanc\\source\\repos\\GomokuComp\\GomokuComp\\GomokuPackage\\RandomBot.cs",
+              "RelativeToolTip": "GomokuPackage\\RandomBot.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-19T04:12:48.011Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GomokuGame.cs",
+              "DocumentMoniker": "C:\\Users\\dpanc\\source\\repos\\GomokuComp\\GomokuComp\\GomokuPackage\\GomokuGame.cs",
+              "RelativeDocumentMoniker": "GomokuPackage\\GomokuGame.cs",
+              "ToolTip": "C:\\Users\\dpanc\\source\\repos\\GomokuComp\\GomokuComp\\GomokuPackage\\GomokuGame.cs",
+              "RelativeToolTip": "GomokuPackage\\GomokuGame.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-19T04:12:43.998Z",
+              "EditorCaption": ""
             }
           ]
         },
         {
-          "DockedHeight": 93,
+          "DockedWidth": 431,
           "SelectedChildIndex": -1,
           "Children": [
             {

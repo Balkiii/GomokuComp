@@ -20,7 +20,7 @@ namespace GomokuPackage
         public void RunTournament(int gamesPerMatch)
         {
             var results = new Dictionary<string, int>();
-
+            
             foreach (var bot in bots)
                 results[bot.Name] = 0;
 
@@ -28,6 +28,7 @@ namespace GomokuPackage
             {
                 for (int j = i + 1; j < bots.Count; j++)
                 {
+
                     RunMatch(bots[i], bots[j], gamesPerMatch, results);
                 }
             }
@@ -44,11 +45,26 @@ namespace GomokuPackage
             for (int g = 0; g < games; g++)
             {
                 var game = new GomokuGame();
-                int winner = PlayGame(game, bot1, bot2);
-                if (winner == 1)
-                    results[bot1.Name]++;
-                else if (winner == 2)
-                    results[bot2.Name]++;
+                int winner;
+
+                if (g%2 == 0)
+                {
+                    winner = PlayGame(game, bot1, bot2);
+                    
+                    if (winner == 1)
+                        results[bot1.Name]++;
+                    else if (winner == 2)
+                        results[bot2.Name]++;
+                }
+                else
+                {
+                    winner = PlayGame(game, bot2, bot1);
+
+                    if (winner == 1)
+                        results[bot2.Name]++;
+                    else if (winner == 2)
+                        results[bot1.Name]++;
+                }
             }
         }
 
@@ -58,7 +74,16 @@ namespace GomokuPackage
             {
                 var currentPlayer = game.GetCurrentPlayer();
                 IBot bot = currentPlayer == 1 ? bot1 : bot2;
+
+                game.sw.Start();
                 var move = bot.MakeMove(game.GetBoard(), currentPlayer);
+
+                if(game.RemainingTime() < 0)
+                {
+                    Console.WriteLine($"{bot.Name} timed out");
+                    return 3 - currentPlayer;
+                }
+
                 if (game.MakeMove(currentPlayer, move.x, move.y))
                 {
                     int winner = game.CheckWinner();
