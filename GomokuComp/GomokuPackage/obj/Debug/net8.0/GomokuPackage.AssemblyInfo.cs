@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GomokuPackage")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+586621f20d4300318c33496e9f50918bc6e8a2db")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1866e31e5d6ce54227b53cb68dc68ea5e94004bd")]
 [assembly: System.Reflection.AssemblyProductAttribute("GomokuPackage")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GomokuPackage")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
