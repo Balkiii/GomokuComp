@@ -1,0 +1,15 @@
+C:\Users\dpanc\source\repos\GomokuComp\GomokuPackage\bin\Debug\net8.0\GomokuPackage.exe
+C:\Users\dpanc\source\repos\GomokuComp\GomokuPackage\bin\Debug\net8.0\GomokuPackage.deps.json
+C:\Users\dpanc\source\repos\GomokuComp\GomokuPackage\bin\Debug\net8.0\GomokuPackage.runtimeconfig.json
+C:\Users\dpanc\source\repos\GomokuComp\GomokuPackage\bin\Debug\net8.0\GomokuPackage.dll
+C:\Users\dpanc\source\repos\GomokuComp\GomokuPackage\bin\Debug\net8.0\GomokuPackage.pdb
+C:\Users\dpanc\source\repos\GomokuComp\GomokuPackage\obj\Debug\net8.0\GomokuPackage.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dpanc\source\repos\GomokuComp\GomokuPackage\obj\Debug\net8.0\GomokuPackage.AssemblyInfoInputs.cache
+C:\Users\dpanc\source\repos\GomokuComp\GomokuPackage\obj\Debug\net8.0\GomokuPackage.AssemblyInfo.cs
+C:\Users\dpanc\source\repos\GomokuComp\GomokuPackage\obj\Debug\net8.0\GomokuPackage.csproj.CoreCompileInputs.cache
+C:\Users\dpanc\source\repos\GomokuComp\GomokuPackage\obj\Debug\net8.0\GomokuPackage.sourcelink.json
+C:\Users\dpanc\source\repos\GomokuComp\GomokuPackage\obj\Debug\net8.0\GomokuPackage.dll
+C:\Users\dpanc\source\repos\GomokuComp\GomokuPackage\obj\Debug\net8.0\refint\GomokuPackage.dll
+C:\Users\dpanc\source\repos\GomokuComp\GomokuPackage\obj\Debug\net8.0\GomokuPackage.pdb
+C:\Users\dpanc\source\repos\GomokuComp\GomokuPackage\obj\Debug\net8.0\GomokuPackage.genruntimeconfig.cache
+C:\Users\dpanc\source\repos\GomokuComp\GomokuPackage\obj\Debug\net8.0\ref\GomokuPackage.dll
