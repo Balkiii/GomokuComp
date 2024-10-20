@@ -12,7 +12,7 @@ namespace GomokuPackage
         private int[,] board = new int[15, 15];
         private int currentPlayer = 1;
         private int moveCount = 0;
-        public Stopwatch sw;
+        public Stopwatch sw = new Stopwatch();
 
         public long RemainingTime()
         {

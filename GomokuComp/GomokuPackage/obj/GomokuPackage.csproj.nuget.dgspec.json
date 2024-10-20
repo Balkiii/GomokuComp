@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dpanc\\Source\\Repos\\GomokuComp\\GomokuComp\\GomokuPackage\\GomokuPackage.csproj": {}
+    "C:\\Users\\dpanc\\source\\repos\\GomokuComp\\GomokuComp\\GomokuPackage\\GomokuPackage.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dpanc\\Source\\Repos\\GomokuComp\\GomokuComp\\GomokuPackage\\GomokuPackage.csproj": {
+    "C:\\Users\\dpanc\\source\\repos\\GomokuComp\\GomokuComp\\GomokuPackage\\GomokuPackage.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dpanc\\Source\\Repos\\GomokuComp\\GomokuComp\\GomokuPackage\\GomokuPackage.csproj",
+        "projectUniqueName": "C:\\Users\\dpanc\\source\\repos\\GomokuComp\\GomokuComp\\GomokuPackage\\GomokuPackage.csproj",
         "projectName": "GomokuPackage",
-        "projectPath": "C:\\Users\\dpanc\\Source\\Repos\\GomokuComp\\GomokuComp\\GomokuPackage\\GomokuPackage.csproj",
+        "projectPath": "C:\\Users\\dpanc\\source\\repos\\GomokuComp\\GomokuComp\\GomokuPackage\\GomokuPackage.csproj",
         "packagesPath": "C:\\Users\\dpanc\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\dpanc\\Source\\Repos\\GomokuComp\\GomokuComp\\GomokuPackage\\obj\\",
         "projectStyle": "PackageReference",
