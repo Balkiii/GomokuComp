@@ -17,7 +17,7 @@ namespace GomokuPackage
             this.bots = bots;
         }
 
-        public void RunTournament(int gamesPerMatch)
+        public void RunTournament(int gamesPerMatch, int millisecondsPerMove)
         {
             var results = new Dictionary<string, int>();
             
@@ -29,7 +29,7 @@ namespace GomokuPackage
                 for (int j = i + 1; j < bots.Count; j++)
                 {
 
-                    RunMatch(bots[i], bots[j], gamesPerMatch, results);
+                    RunMatch(bots[i], bots[j], gamesPerMatch, millisecondsPerMove, results);
                 }
             }
 
@@ -40,11 +40,11 @@ namespace GomokuPackage
             }
         }
 
-        private void RunMatch(IBot bot1, IBot bot2, int games, Dictionary<string, int> results)
+        private void RunMatch(IBot bot1, IBot bot2, int games, int millisecondsPerMove, Dictionary<string, int> results)
         {
             for (int g = 0; g < games; g++)
             {
-                var game = new GomokuGame();
+                var game = new GomokuGame(millisecondsPerMove);
                 int winner;
 
                 if (g%2 == 0)

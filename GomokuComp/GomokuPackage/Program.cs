@@ -18,7 +18,8 @@ namespace GomokuPackage
             Tournament tournament = new Tournament(bots);
 
             int numberOfGamesToRunPerMatch = 1000;
-            tournament.RunTournament(numberOfGamesToRunPerMatch);
+            int millisecondsPerMove = 100;
+            tournament.RunTournament(numberOfGamesToRunPerMatch, millisecondsPerMove);
 
             Console.ReadLine();
         }

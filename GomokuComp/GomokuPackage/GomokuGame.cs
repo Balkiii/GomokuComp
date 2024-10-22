@@ -13,10 +13,17 @@ namespace GomokuPackage
         private int currentPlayer = 1;
         private int moveCount = 0;
         public Stopwatch sw = new Stopwatch();
+        private int millisecondsToThink;
+
+        public GomokuGame(int timeToThink)
+        {
+            millisecondsToThink = timeToThink;
+        }
 
         public long RemainingTime()
         {
-            return 1000000 - sw.ElapsedTicks;
+            int nanosecondsToThink = 1000000 * millisecondsToThink;
+            return nanosecondsToThink *  - sw.ElapsedTicks;
         }
 
         public int[,] GetBoard()
