@@ -11,10 +11,14 @@
         "projectName": "GomokuPackage",
         "projectPath": "C:\\Users\\dpanc\\Source\\Repos\\GomokuComp\\GomokuComp\\GomokuPackage\\GomokuPackage.csproj",
         "packagesPath": "C:\\Users\\dpanc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dpanc\\source\\repos\\GomokuComp\\GomokuComp\\GomokuPackage\\obj\\",
+        "outputPath": "C:\\Users\\dpanc\\Source\\Repos\\GomokuComp\\GomokuComp\\GomokuPackage\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\dpanc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
