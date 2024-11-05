@@ -12,6 +12,7 @@ namespace GomokuPackage
         private int[,] board = new int[15, 15];
         private int currentPlayer = 1;
         private int moveCount = 0;
+        public int BoardSize = 15;
         public Stopwatch sw = new Stopwatch();
         private int millisecondsToThink;
 
@@ -22,8 +23,7 @@ namespace GomokuPackage
 
         public long RemainingTime()
         {
-            int nanosecondsToThink = 1000000 * millisecondsToThink;
-            return nanosecondsToThink *  - sw.ElapsedTicks;
+            return millisecondsToThink - sw.ElapsedMilliseconds;
         }
 
         public int[,] GetBoard()
@@ -43,7 +43,6 @@ namespace GomokuPackage
                 }
             }
             catch { }
-
             return false;
         }
 
@@ -144,6 +143,41 @@ namespace GomokuPackage
         {
             return moveCount >= 225;
         }
+
+        public void DisplayBoard(int startX, int startY)
+        {
+            // Set cursor position to the starting point
+            Console.SetCursorPosition(startX, startY);
+
+            // Column headers
+            Console.Write("   "); // Spaces to align with row numbers
+            for (int i = 0; i < BoardSize; i++)
+            {
+                Console.Write(" " + (char)('A' + i) + " ");
+            }
+            Console.WriteLine();
+
+            for (int x = 0; x < BoardSize; x++)
+            {
+                // Move the cursor to the correct position
+                Console.SetCursorPosition(startX, startY + x + 1);
+
+                // Row numbers
+                Console.Write((x + 1).ToString("D2") + " ");
+                for (int y = 0; y < BoardSize; y++)
+                {
+                    char symbol = board[x, y] switch
+                    {
+                        1 => 'X',
+                        2 => 'O',
+                        _ => '.'
+                    };
+                    Console.Write(" " + symbol + " ");
+                }
+            }
+        }
+
+        // Other methods (MakeMove, GetBoard, CheckWinner, IsBoardFull, etc.)
     }
 
 }

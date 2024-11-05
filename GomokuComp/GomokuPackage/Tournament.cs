@@ -75,12 +75,15 @@ namespace GomokuPackage
                 var currentPlayer = game.GetCurrentPlayer();
                 IBot bot = currentPlayer == 1 ? bot1 : bot2;
 
+
                 game.sw.Start();
                 var move = bot.MakeMove(game.GetBoard(), currentPlayer);
+                game.sw.Stop();
 
                 if(game.RemainingTime() < 0)
                 {
                     Console.WriteLine($"{bot.Name} timed out");
+                    game.sw.Reset();
                     return 3 - currentPlayer;
                 }
 

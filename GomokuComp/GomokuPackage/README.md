@@ -9,5 +9,6 @@ This short description will teach you how to use this package to set up and test
 
 ### DO NOT MODIFY THE FOLLOWING CLASSES
 - **Tournament**: This class handles the tournament, as well as enforcing legal moves and time limits. Each player has only 1 millisecond per move.
-- **IBot**: This is the IBot interface
+- **IBot**: This is the IBot interface.
 - **GomokuGame**: This class handles each individual game of Gomoku, played in the unrestricted variant. 
+- **HumanGame**: This class handles the human console game interface.

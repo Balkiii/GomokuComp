@@ -1,27 +1,40 @@
-﻿using System;
+﻿using GomokuPackage;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.IO;
-using System.Reflection;
+using System.Runtime.InteropServices;
 
 namespace GomokuPackage
 {
-
     class Program
     {
         static void Main(string[] args)
         {
-            List<IBot> bots = [new RandomBot()]; // Modify list contents to have different bots compete against each other
+            Console.CursorVisible = false;
 
-            Tournament tournament = new Tournament(bots);
+            List<IBot> bots = new List<IBot>
+            {
+                // Add bots to do a bot tournament
+                // If there is only one bot in the list, a human match will start
+                new RandomBot(),
+            };
 
-            int numberOfGamesToRunPerMatch = 1000;
-            int millisecondsPerMove = 100;
-            tournament.RunTournament(numberOfGamesToRunPerMatch, millisecondsPerMove);
-
-            Console.ReadLine();
+            if (bots.Count == 1)
+            {
+                HumanGame.StartHumanGame(bots);
+            }
+            else if (bots.Count > 1)
+            {
+                // Run the tournament as before
+                Tournament tournament = new Tournament(bots);
+                int numberOfGamesToRunPerMatch = 1000;
+                int millisecondsPerMove = 100;
+                tournament.RunTournament(numberOfGamesToRunPerMatch, millisecondsPerMove);
+            }
+            else
+            {
+                throw new ArgumentException("You cannot start the match without any bots> or add only one bot to play against it as a human");
+            }
         }
     }
 }
