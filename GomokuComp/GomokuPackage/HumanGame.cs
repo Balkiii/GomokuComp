@@ -18,6 +18,7 @@ public class HumanGame
     static string message = ""; // Store messages here
     static int boardStartX = 0; // X position where the board starts
     static int boardStartY = 0; // Y position where the board starts
+    static List<(int x, int y)> winningPositions = new List<(int x, int y)>();
 
     public static void StartHumanGame(List<IBot> bots)
     {
@@ -93,6 +94,7 @@ public class HumanGame
                                             if (game.CheckWinner() == humanPlayerNumber)
                                             {
                                                 message = "Congratulations! You win!";
+                                                winningPositions = FindWinningLine(game.GetBoard(), humanPlayerNumber);
                                                 exitRequested = true;
                                             }
                                             else if (game.IsBoardFull())
@@ -165,6 +167,7 @@ public class HumanGame
             if (game.CheckWinner() == botPlayerNumber)
             {
                 message = "Bot wins! Better luck next time.";
+                winningPositions = FindWinningLine(game.GetBoard(), botPlayerNumber);
                 exitRequested = true;
             }
             else if (game.IsBoardFull())
@@ -185,6 +188,102 @@ public class HumanGame
         }
     }
 
+    private static void DisplayBoardWithHighlight(int[,] board, List<(int x, int y)> highlightPositions, int startX, int startY)
+    {
+        // Column headers
+        Console.SetCursorPosition(startX, startY);
+        Console.Write("   "); // Spaces to align with row numbers
+        for (int i = 0; i < game.BoardSize; i++)
+        {
+            Console.Write(" " + (char)('A' + i) + " ");
+        }
+        Console.WriteLine();
+
+        for (int x = 0; x < game.BoardSize; x++)
+        {
+            // Move the cursor to the correct position
+            Console.SetCursorPosition(startX, startY + x + 1);
+
+            // Row numbers
+            Console.Write((x + 1).ToString("D2") + " ");
+            for (int y = 0; y < game.BoardSize; y++)
+            {
+                char symbol = board[x, y] switch
+                {
+                    1 => 'X',
+                    2 => 'O',
+                    _ => '.'
+                };
+
+                if (highlightPositions.Contains((x, y)))
+                {
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.Write(" " + symbol + " ");
+                    Console.ResetColor();
+                }
+                else
+                {
+                    Console.Write(" " + symbol + " ");
+                }
+            }
+        }
+    }
+
+
+    private static List<(int x, int y)> FindWinningLine(int[,] board, int playerNumber)
+    {
+        List<(int x, int y)> winningLine = new List<(int x, int y)>();
+
+        for (int x = 0; x < game.BoardSize; x++)
+        {
+            for (int y = 0; y < game.BoardSize; y++)
+            {
+                if (board[x, y] != playerNumber)
+                    continue;
+
+                // Check in all four directions
+                // Right
+                if (y + 4 < game.BoardSize &&
+                    Enumerable.Range(0, 5).All(i => board[x, y + i] == playerNumber))
+                {
+                    for (int i = 0; i < 5; i++)
+                        winningLine.Add((x, y + i));
+                    return winningLine;
+                }
+
+                // Down
+                if (x + 4 < game.BoardSize &&
+                    Enumerable.Range(0, 5).All(i => board[x + i, y] == playerNumber))
+                {
+                    for (int i = 0; i < 5; i++)
+                        winningLine.Add((x + i, y));
+                    return winningLine;
+                }
+
+                // Diagonal down-right
+                if (x + 4 < game.BoardSize && y + 4 < game.BoardSize &&
+                    Enumerable.Range(0, 5).All(i => board[x + i, y + i] == playerNumber))
+                {
+                    for (int i = 0; i < 5; i++)
+                        winningLine.Add((x + i, y + i));
+                    return winningLine;
+                }
+
+                // Diagonal up-right
+                if (x - 4 >= 0 && y + 4 < game.BoardSize &&
+                    Enumerable.Range(0, 5).All(i => board[x - i, y + i] == playerNumber))
+                {
+                    for (int i = 0; i < 5; i++)
+                        winningLine.Add((x - i, y + i));
+                    return winningLine;
+                }
+            }
+        }
+
+        return winningLine; // Empty list if no winning line found
+    }
+
+
     private static void RenderGameScreen()
     {
         // Clear the board area only
@@ -194,8 +293,8 @@ public class HumanGame
             Console.Write(new string(' ', Console.WindowWidth));
         }
 
-        // Draw the board
-        game.DisplayBoard(boardStartX, boardStartY);
+        // Draw the board with possible highlighting
+        DisplayBoardWithHighlight(game.GetBoard(), winningPositions, boardStartX, boardStartY);
 
         // Write the message below the board
         int messageLine = boardStartY + game.BoardSize + 2;
@@ -204,6 +303,7 @@ public class HumanGame
         Console.SetCursorPosition(0, messageLine);
         Console.WriteLine(message);
     }
+
 
     private static bool TryGetBoardPosition(int consoleX, int consoleY, out int x, out int y)
     {
