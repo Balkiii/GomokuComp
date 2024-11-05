@@ -10,8 +10,6 @@ namespace GomokuPackage
     {
         static void Main(string[] args)
         {
-            Console.CursorVisible = false;
-
             List<IBot> bots = new List<IBot>
             {
                 // Add bots to do a bot tournament
